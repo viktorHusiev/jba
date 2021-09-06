@@ -1,0 +1,71 @@
+{
+  "workflowApiVersion": "1.1",
+  "metaData": {
+    "icon": "images/sms.png",
+    "category": "RestDecision"
+  },
+  "type": "REST",
+  "lang": {
+    "en-US": {
+      "name": "Viktor REST Activity (Workflow API v1.1)",
+      "description": "An example REST activity using workflow API v1.1 format."
+    }
+  },
+  "arguments": {
+    "execute": {
+      "inArguments": [],
+      "outArguments": [],
+      "url": "https://journey-builder-viktor.herokuapp.com/execute"
+    }
+  },
+  "configurationArguments": {
+    "save": {
+      "url": "https://journey-builder-viktor.herokuapp.com/save"
+    },
+    "publish": {
+      "url": "https://journey-builder-viktor.herokuapp.com/publish"
+    },
+    "validate": {
+      "url": "https://journey-builder-viktor.herokuapp.com/validate"
+    },
+    "stop": {
+      "url": "https://journey-builder-viktor.herokuapp.com/stop"
+    }
+  },
+  "wizardSteps": [
+    { "key": "eventdefinitionkey", "label": "Event Definition Key" },
+    { "key": "idselection", "label": "ID Selection" }
+  ],
+  "outcomes": [
+    {
+      "arguments": {
+        "branchResult": "firstBranchKey"
+      },
+      "metaData": {
+        "label": "<LABEL FOR PATH 1>"
+      }
+    },
+    {
+      "arguments": {
+        "branchResult": "secondBranchKey"
+      },
+      "metaData": {
+        "label": "<LABEL FOR PATH 2>"
+      }
+    }
+  ],
+  "userInterfaces": {
+    "configInspector": {
+      "hideHeader": true,
+      "size": "scm-sm"
+    }
+  },
+  "schema": {
+    "arguments": {
+      "execute": {
+        "inArguments": [],
+        "outArguments": []
+      }
+    }
+  }
+}

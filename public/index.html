@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Service Cloud Custom Split</title>
+	<script
+	src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	crossorigin="anonymous"
+  ></script>
+  <script
+	src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"
+	integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer"
+  ></script>
+  <script type="text/javascript">
+	(function () {
+	  var config = {
+		baseUrl: "",
+	  };
+
+	  var dependencies = ["customActivity"];
+
+	  require(config, dependencies);
+	})();
+  </script>
+  
+	<style type="text/css">
+		body {
+			padding: 15px;
+			margin: 0;
+			font-size: 11px;
+			color: #16325c;
+			font-family: "Salesforce Sans", Arial, sans-serif;
+		}
+
+		.step {
+			display: none;
+		}
+
+		#step1 {
+			display: block;
+		}
+
+		input {
+			font-family: inherit;
+			display: block;
+			padding: 4px 5px;
+			font-size: 11px;
+			color: #16325c;
+			background-color: #ffffff;
+			background-image: none;
+			border: 1px solid #d8dde6;
+			border-radius: 0.25rem;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+
+		input[type=text] {
+			width: 95%;
+			margin-bottom: 40px;
+		}
+
+		.inputLabel {
+			margin-bottom: 5px;
+			font-size: 8pt;
+			color: #808080;
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+<body>
+	<div id="step1" class="step">
+		<p>Event definition key</p>
+		<p class="inputLabel">Event Definition Key</p>
+		<input id="select-entryevent-defkey" placeholder="Event definition key" type="text" required="required" disabled="disabled" minlength="1" />
+		<input type="button" id="add-branch" value="+ Add Path" />
+	</div>
+	<div id="step2" class="step">
+		<p>Please select the ID (event data column) to pass to the custom split backend.</p>
+		<p class="inputLabel">ID</p>
+		<input id="select-id" placeholder="ID to pass to the backend" type="text" />
+		<select id="select-id-dropdown">
+		</select>
+	</div>
+	<div id="loggerSection">
+	
+	</div>
+</body>
+</html>
