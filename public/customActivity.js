@@ -42,7 +42,7 @@ define(function (require) {
 			const index = payload.outcomes.length + 1;
 			payload.outcomes.push({
 				"arguments": {
-					"branchResult": "lastBranchKey" + index
+					"branchResult": "lastBranchKey"+index
 				},
 				"metaData": {
 					"label": `<LABEL FOR PATH ${index}>`
@@ -139,8 +139,6 @@ define(function (require) {
 			"Name": "{{Event." + eventDefinitionKey + ".Name}}",
 			"ContactKey": "{{Event." + eventDefinitionKey + ". ContactKey}}"
 		}];
-		console.log(payload.outcomes);
-		payload['arguments'].execute.inArguments.push({"outcomes":payload.outcomes})
 		connection.trigger('updateActivity', payload);
 	}
 

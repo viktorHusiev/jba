@@ -11,12 +11,12 @@ app.use(
 app.use(express.static("public"))
 
 app.post("/execute", (req, res) => {
-  console.log("execute body ===========> ", req.body);
+  // console.log("execute body ===========> ", req.body);
   const requestBody = JSON.parse(req.body.toString());
   const name = requestBody.inArguments[0].Name;
   console.log("execute arg.inArguments[0].Name ===========> ", name);
 
-  if (name.startsWith("V")) {
+  if (name.startsWith("Y")) {
     console.log("firstBranchKey");
     return res.status(200).json({ branchResult: 'firstBranchKey' });
   }
