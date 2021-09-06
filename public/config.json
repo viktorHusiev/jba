@@ -15,21 +15,21 @@
     "execute": {
       "inArguments": [],
       "outArguments": [],
-      "url": "https://journey-builder-viktor.herokuapp.com/execute"
+      "url": "https://jba23453r5.herokuapp.com/execute"
     }
   },
   "configurationArguments": {
     "save": {
-      "url": "https://journey-builder-viktor.herokuapp.com/save"
+      "url": "https://jba23453r5.herokuapp.com/save"
     },
     "publish": {
-      "url": "https://journey-builder-viktor.herokuapp.com/publish"
+      "url": "https://jba23453r5.herokuapp.com/publish"
     },
     "validate": {
-      "url": "https://journey-builder-viktor.herokuapp.com/validate"
+      "url": "https://jba23453r5.herokuapp.com/validate"
     },
     "stop": {
-      "url": "https://journey-builder-viktor.herokuapp.com/stop"
+      "url": "https://jba23453r5.herokuapp.com/stop"
     }
   },
   "wizardSteps": [
